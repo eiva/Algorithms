@@ -1,7 +1,11 @@
 ﻿<Properties>
   <AuthorInfo Name="Eugene Ivanchenko" Email="" Copyright="EIva" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestClient/Program.cs">
+    <Files>
+      <File FileName="TestClient/Program.cs" Line="5" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
