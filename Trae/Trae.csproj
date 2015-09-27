@@ -35,4 +35,14 @@
     <Compile Include="Contract.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Tree\Tree.csproj">
+      <Project>{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}</Project>
+      <Name>Tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

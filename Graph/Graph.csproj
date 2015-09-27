@@ -43,4 +43,10 @@
     <Compile Include="Graph.DFS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

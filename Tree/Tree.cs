@@ -12,7 +12,16 @@ namespace Tree
 		/// Accessing child nodes.
 		/// </summary>
 		/// <value>The children.</value>
-		ITree<TKey, TValue> this[TKey key] {get;}
+		ITree<TKey, TValue> this[TKey key] {get; set;}
+
+		/// <summary>
+		/// Gets list of existed keys in tree.
+		/// </summary>
+		/// <remarks>
+		/// Call of <see cref="this[]"/> with value from this collection should be successfull.
+		/// </remarks>
+		/// <value>The keys.</value>
+		IEnumerable<TKey> Keys { get; }
 
 		/// <summary>
 		/// Value stored by current tree node.
@@ -21,7 +30,23 @@ namespace Tree
 		TValue Value { get; set; }
 	}
 
-	public class BinaryTree<TValue> : ITree<bool, TValue>
+	public static class TraverseHelpers
+	{
+		public static void Traverse<TK, TV>(this ITree<TK, TV> tree, Action<TK, TV> action)  where TK:IEquatable<TK>, IComparable<TK>
+		{
+			var q = new Queue<KeyValuePair<TK, ITree<TK, TV>>> ();
+			q.Enqueue (new KeyValuePair<TK, ITree<TK, TV>>(default(TK), tree));
+			while (q.Count > 0) {
+				var e = q.Dequeue ();
+				action (e.Key, e.Value.Value);
+				foreach (var k in e.Value.Keys) {
+					q.Enqueue(new KeyValuePair<TK, ITree<TK, TV>>(k, e.Value[k]));
+				}
+			}
+		}
+	}
+
+	/*public class BinaryTree<TValue> : ITree<bool, TValue>
 	{
 		/// <summary>
 		/// Collection of child nodes.
@@ -36,7 +61,7 @@ namespace Tree
 		/// </summary>
 		/// <value>The value.</value>
 		public TValue Value { get; set; }
-	}
+	}*/
 
 	/*class TreaTree<TValue> : ITree<char, TValue>
 	{

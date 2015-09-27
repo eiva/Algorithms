@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2176469C-0B78-48BB-9096-D5333B468258}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>TestClient</RootNamespace>
-    <AssemblyName>TestClient</AssemblyName>
+    <ProjectGuid>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Utils</RootNamespace>
+    <AssemblyName>Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,7 +17,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -26,33 +26,15 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DictionaryHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Graph\Graph.csproj">
-      <Project>{906B23A9-BD43-4530-83C6-5663528E99AB}</Project>
-      <Name>Graph</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Trae\Trae.csproj">
-      <Project>{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}</Project>
-      <Name>Trae</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tree\Tree.csproj">
-      <Project>{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}</Project>
-      <Name>Tree</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</Project>
-      <Name>Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

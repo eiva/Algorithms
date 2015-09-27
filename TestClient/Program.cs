@@ -9,7 +9,12 @@ namespace TestClient
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ($"Hello {2+3} World!");
+			Trae.Trae<char> trae = new Trae.Trae<char>();
+			trae.Apply ("ATC");
+			trae.Apply ("AT");
+			trae.Apply ("A");
+			trae.Apply ("CA");
+			Tree.TraverseHelpers.Traverse(trae, (k,v) => Console.WriteLine($"{k} - {v}"));
 		}
 	}
 }
