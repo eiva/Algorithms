@@ -1,7 +1,14 @@
 ﻿<Properties>
   <AuthorInfo Name="Eugene Ivanchenko" Email="" Copyright="EIva" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Graph/Contract.cs">
+    <Files>
+      <File FileName="Graph/Contract.cs" Line="1" Column="1" />
+      <File FileName="Graph/Graph.BFS.cs" Line="1" Column="1" />
+      <File FileName="Graph/Graph.Bidirectional.cs" Line="25" Column="4" />
+      <File FileName="Graph/Graph.DFS.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

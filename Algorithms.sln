@@ -1,7 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GraphWorks", "GraphWorks", "{5E5A37C6-C948-414C-9622-A068370C0DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{906B23A9-BD43-4530-83C6-5663528E99AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{906B23A9-BD43-4530-83C6-5663528E99AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906B23A9-BD43-4530-83C6-5663528E99AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{906B23A9-BD43-4530-83C6-5663528E99AB} = {5E5A37C6-C948-414C-9622-A068370C0DAA}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Graph\Graph.csproj
 		Policies = $0
 		$0.StandardHeader = $1
 		$1.Text = 
