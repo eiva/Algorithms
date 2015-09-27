@@ -1,9 +1,10 @@
-﻿<Properties>
+﻿<Properties StartupItem="TestClient/TestClient.csproj">
   <AuthorInfo Name="Eugene Ivanchenko" Email="" Copyright="EIva" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestClient/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trae/Contract.cs">
     <Files>
-      <File FileName="TestClient/Program.cs" Line="5" Column="27" />
+      <File FileName="TestClient/Program.cs" Line="12" Column="46" />
+      <File FileName="Trae/Contract.cs" Line="7" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5,7 +5,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GraphWorks", "GraphWorks", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{906B23A9-BD43-4530-83C6-5663528E99AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{2176469C-0B78-48BB-9096-D5333B468258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trae", "Trae\Trae.csproj", "{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,13 +25,19 @@ Global
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{906B23A9-BD43-4530-83C6-5663528E99AB} = {5E5A37C6-C948-414C-9622-A068370C0DAA}
-		{2176469C-0B78-48BB-9096-D5333B468258} = {5E5A37C6-C948-414C-9622-A068370C0DAA}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TestClient\TestClient.csproj
 		Policies = $0
 		$0.StandardHeader = $1
 		$1.Text = 
