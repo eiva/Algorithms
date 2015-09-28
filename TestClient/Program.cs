@@ -14,7 +14,7 @@ namespace TestClient
 			trae.Apply ("AT");
 			trae.Apply ("A");
 			trae.Apply ("CA");
-			Tree.TraverseHelpers.Traverse(trae, (k,v) => Console.WriteLine($"{k} - {v}"));
+			Tree.TraverseHelpers.BreadthFirstTraverse(trae, (k,v) => Console.Write($"{k} - {v} "), ()=>Console.WriteLine());
 		}
 	}
 }
