@@ -1,7 +1,11 @@
 ﻿<Properties StartupItem="TestClient/TestClient.csproj">
   <AuthorInfo Name="Eugene Ivanchenko" Email="" Copyright="EIva" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Permutation/MyClass.cs">
+    <Files>
+      <File FileName="Permutation/MyClass.cs" Line="4" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
