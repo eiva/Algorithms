@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GraphWorks", "GraphWorks", "{5E5A37C6-C948-414C-9622-A068370C0DAA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{906B23A9-BD43-4530-83C6-5663528E99AB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{2176469C-0B78-48BB-9096-D5333B468258}"
@@ -16,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutation", "Permutation\Permutation.csproj", "{64100214-1431-424C-B8EA-3594F5C52835}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnionFind", "UnionFind\UnionFind.csproj", "{A907035A-076F-4A72-A63A-B5E2E234C195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{906B23A9-BD43-4530-83C6-5663528E99AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text", "Text\Text.csproj", "{30044909-677F-45E0-B663-56DD3D052D3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +31,10 @@ Global
 		{240A87DF-3A08-4EF9-8F55-4842849AC42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{240A87DF-3A08-4EF9-8F55-4842849AC42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{240A87DF-3A08-4EF9-8F55-4842849AC42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30044909-677F-45E0-B663-56DD3D052D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30044909-677F-45E0-B663-56DD3D052D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30044909-677F-45E0-B663-56DD3D052D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30044909-677F-45E0-B663-56DD3D052D3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64100214-1431-424C-B8EA-3594F5C52835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64100214-1431-424C-B8EA-3594F5C52835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64100214-1431-424C-B8EA-3594F5C52835}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,9 +55,6 @@ Global
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{906B23A9-BD43-4530-83C6-5663528E99AB} = {5E5A37C6-C948-414C-9622-A068370C0DAA}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

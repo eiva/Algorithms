@@ -62,5 +62,9 @@
       <Project>{A907035A-076F-4A72-A63A-B5E2E234C195}</Project>
       <Name>UnionFind</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Text\Text.csproj">
+      <Project>{30044909-677F-45E0-B663-56DD3D052D3B}</Project>
+      <Name>Text</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
