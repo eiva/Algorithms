@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutation", "Permutation\Permutation.csproj", "{64100214-1431-424C-B8EA-3594F5C52835}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnionFind", "UnionFind\UnionFind.csproj", "{A907035A-076F-4A72-A63A-B5E2E234C195}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906B23A9-BD43-4530-83C6-5663528E99AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A907035A-076F-4A72-A63A-B5E2E234C195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A907035A-076F-4A72-A63A-B5E2E234C195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A907035A-076F-4A72-A63A-B5E2E234C195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A907035A-076F-4A72-A63A-B5E2E234C195}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU

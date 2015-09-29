@@ -54,5 +54,13 @@
       <Project>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Permutation\Permutation.csproj">
+      <Project>{64100214-1431-424C-B8EA-3594F5C52835}</Project>
+      <Name>Permutation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnionFind\UnionFind.csproj">
+      <Project>{A907035A-076F-4A72-A63A-B5E2E234C195}</Project>
+      <Name>UnionFind</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
