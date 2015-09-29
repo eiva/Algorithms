@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Text
 {
+	/// <summary>
+	/// Provides functionality to calculate different distances for a specified strings.
+	/// </summary>
 	public static class Distance
 	{
 		/// <summary>
@@ -56,6 +59,88 @@ namespace Text
 				}
 			}
 			return distance[currentRow, m];
+		}
+
+
+		/// <summary>
+		/// Damerau-Levenshtein distance is computed in asymptotic time O((max + 1) * min(first.length(), second.length()))
+		/// </summary>
+		/// <param name="first"></param>
+		/// <param name="second"></param>
+		/// <param name="max"></param>
+		/// <returns></returns>
+		public static int DamerauLevenshtein<T>(IEnumerable<T> source, IEnumerable<T> target)
+			where T : IEquatable<T>
+		{
+			if (source == null || target == null)
+				throw new ArgumentNullException ();
+
+			var first = source.ToArray ();
+			var second = target.ToArray ();
+			int firstLength = first.Length;
+			int secondLength = second.Length;
+
+			if (firstLength == 0)
+				return secondLength;
+
+			if (secondLength == 0) return firstLength;
+
+			if (firstLength > secondLength)
+			{
+				var tmp = first;
+				first = second;
+				second = tmp;
+				firstLength = secondLength;
+				secondLength = second.Length;
+			}
+
+			int max = secondLength;
+			if (secondLength - firstLength > max) return max + 1;
+
+
+			var currentRow = new int[firstLength + 1];
+			var previousRow = new int[firstLength + 1];
+			var transpositionRow = new int[firstLength + 1];
+		
+
+			for (int i = 0; i <= firstLength; i++)
+				previousRow[i] = i;
+
+			var lastSecondCh = default(T);
+			for (int i = 1; i <= secondLength; i++)
+			{
+				var secondCh = second[i - 1];
+				currentRow[0] = i;
+
+				// Compute only diagonal stripe of width 2 * (max + 1)
+				int from = Math.Max(i - max - 1, 1);
+				int to = Math.Min(i + max + 1, firstLength);
+
+				var lastFirstCh = default(T);
+				for (int j = from; j <= to; j++)
+				{
+					var firstCh = first[j - 1];
+
+					// Compute minimal cost of state change to current state from previous states of deletion, insertion and swapping 
+					int cost = firstCh.Equals(secondCh) ? 0 : 1;
+					int value = Math.Min(Math.Min(currentRow[j - 1] + 1, previousRow[j] + 1), previousRow[j - 1] + cost);
+
+					// If there was transposition, take in account its cost 
+					if (firstCh.Equals(lastSecondCh) && secondCh.Equals(lastFirstCh))
+						value = Math.Min(value, transpositionRow[j - 2] + cost);
+
+					currentRow[j] = value;
+					lastFirstCh = firstCh;
+				}
+				lastSecondCh = secondCh;
+
+				int[] tempRow = transpositionRow;
+				transpositionRow = previousRow;
+				previousRow = currentRow;
+				currentRow = tempRow;
+			}
+
+			return previousRow[firstLength];
 		}
 	}
 }
