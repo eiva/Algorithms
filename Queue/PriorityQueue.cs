@@ -50,9 +50,45 @@ namespace Queue
 	/// <summary>
 	/// Qriority queue.
 	/// </summary>
+	/// <test>
+	/// var pq = new Queue.PriorityQueue<int, int> ();
+	/// pq.Enqueue (1, 1);
+	/// Console.WriteLine (pq.Dequeue ()); // 1
+	/// Console.WriteLine();
+	///
+	/// pq.Enqueue (1, 1);
+	/// pq.Enqueue (2, 2);
+	/// Console.WriteLine (pq.Dequeue ()); // 2
+	/// Console.WriteLine (pq.Dequeue ()); // 1
+	/// Console.WriteLine();
+
+	/// pq.Enqueue (2, 2);
+	/// pq.Enqueue (1, 1);
+	/// Console.WriteLine (pq.Dequeue ()); // 2
+	/// pq.Enqueue (2, 2);
+	/// Console.WriteLine (pq.Dequeue ()); // 2
+	/// Console.WriteLine();
+	///
+	/// pq.Enqueue (2, 2);
+	/// pq.Enqueue (1, 1);
+	/// pq.Enqueue (2, 2);
+	/// pq.Enqueue (3, 3);
+	/// Console.WriteLine (pq.Dequeue ()); // 3
+	/// Console.WriteLine (pq.Dequeue ()); // 2
+	/// Console.WriteLine (pq.Dequeue ()); // 2
+	/// Console.WriteLine (pq.Dequeue ()); // 1
+	/// </test>
 	public class PriorityQueue<TK, TV> : IPriorityQueue<TK, TV> where TK : IComparable<TK>
 	{
+		/// <summary>
+		/// Priotity heap.
+		/// </summary>
 		private readonly List<KeyValuePair<TK, TV>> _pq = new List<KeyValuePair<TK, TV>>(1);
+
+		public PriorityQueue()
+		{
+			_pq.Add (new KeyValuePair<TK, TV>()); // Element @ position 0 is not used.
+		}
 
 		public void Enqueue(KeyValuePair<TK, TV> value)
 		{
@@ -61,14 +97,10 @@ namespace Queue
 		}
 
 		public bool IsEmpty => _pq.Count <= 1;
+
 		KeyValuePair<TK, TV> IQueue<KeyValuePair<TK, TV>>.Dequeue()
 		{
-			check();
-			var max = _pq [1];
-			swap(1,Count);
-			_pq.RemoveAt (Count);
-			sink (1);
-			return max;
+			return dequeue();
 		}
 		KeyValuePair<TK, TV> IQueue<KeyValuePair<TK, TV>>.Pick()
 		{
@@ -79,14 +111,25 @@ namespace Queue
 
 		public void Enqueue(TK key, TV value)
 		{
+			Enqueue(new KeyValuePair<TK, TV>(key, value));
 		}
 		public TV Dequeue()
 		{
-			return default(TV);
+			return dequeue().Value;
 		}
 		public TV Pick()
 		{
 			return _pq [1].Value;
+		}
+
+		private KeyValuePair<TK,TV> dequeue()
+		{
+			check();
+			var max = _pq [1];
+			swap(1,Count);
+			_pq.RemoveAt (Count);
+			sink (1);
+			return max;
 		}
 
 		private void check()

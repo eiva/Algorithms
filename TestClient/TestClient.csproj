@@ -66,5 +66,9 @@
       <Project>{30044909-677F-45E0-B663-56DD3D052D3B}</Project>
       <Name>Text</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Queue\Queue.csproj">
+      <Project>{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}</Project>
+      <Name>Queue</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
