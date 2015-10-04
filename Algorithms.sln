@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text", "Text\Text.csproj", "{30044909-677F-45E0-B663-56DD3D052D3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

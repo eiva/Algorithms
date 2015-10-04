@@ -6,7 +6,7 @@ namespace TestClient
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine (Text.Distance.DamerauLevenshtein("ACTC", "CTCC"));
+			//Console.WriteLine (Text.Distance.DamerauLevenshtein("ACTC", "CTCC"));
 		}
 	}
 }
