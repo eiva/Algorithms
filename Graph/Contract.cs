@@ -16,7 +16,7 @@ namespace Graph
         /// <param name="v">First vertex.</param>
         /// <param name="t">Second vertex.</param>
         /// <param name="edge">Edge metadata.</param>
-        void AddEdge(TV v, TV t, TE edge = default(TE));
+        void AddEdge(TV v, TV t, TE edge);
 
         /// <summary>
         /// List of adjascent vertexes for given vertex.

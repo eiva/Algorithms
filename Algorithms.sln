@@ -19,12 +19,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text", "Text\Text.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTest", "QueueTest\QueueTest.csproj", "{062498AF-905F-4BCB-98C3-20A9098775F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{062498AF-905F-4BCB-98C3-20A9098775F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062498AF-905F-4BCB-98C3-20A9098775F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062498AF-905F-4BCB-98C3-20A9098775F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062498AF-905F-4BCB-98C3-20A9098775F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2176469C-0B78-48BB-9096-D5333B468258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2176469C-0B78-48BB-9096-D5333B468258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2176469C-0B78-48BB-9096-D5333B468258}.Release|Any CPU.ActiveCfg = Release|Any CPU
