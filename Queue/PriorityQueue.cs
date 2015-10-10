@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Queue
 {
 	/// <summary>
-	/// Generik queue interface.
+	/// Generic queue interface.
 	/// </summary>
 	public interface IQueue<TV>
 	{
@@ -22,12 +23,13 @@ namespace Queue
 		/// <summary>
 		/// Dequeue first element from queue. (this element will be removed from queue).
 		/// </summary>
+		/// <exception cref="InvalidOperationException">If queue is empty.</exception>
 		TV Dequeue();
 
 		/// <summary>
-		/// Pick first element from queue (this element will still be in queue).
+		/// Peek first element from queue (this element will still be in queue).
 		/// </summary>
-		TV Pick();
+		TV Peek();
 
 		/// <summary>
 		/// Returns number of elements within this queue.
@@ -43,41 +45,60 @@ namespace Queue
 	{
 		void Enqueue(TK key, TV value);
 		new TV Dequeue();
-		new TV Pick();
+		new TV Peek();
 	}
 
+	/// <summary>
+	/// Default implementation of queue (using standart one).
+	/// </summary>
+	public sealed class Queue<TV> : IQueue<TV>
+	{
+		/// <summary>
+		/// Default implementation.
+		/// </summary>
+		private readonly System.Collections.Generic.Queue<TV> _queue = new System.Collections.Generic.Queue<TV>();
+
+		/// <summary>
+		/// Enqueue element int the queue.
+		/// </summary>
+		/// <param name="value">Value.</param>
+		public void Enqueue(TV value)
+		{
+			_queue.Enqueue(value);
+		}
+
+		/// <summary>
+		/// Value indicating whether queue is empty.
+		/// </summary>
+		/// <value><c>true</c> if this queue is empty; otherwise, <c>false</c>.</value>
+		public bool IsEmpty => _queue.Count <= 0;
+
+		/// <summary>
+		/// Dequeue first element from queue. (this element will be removed from queue).
+		/// </summary>
+		public TV Dequeue()
+		{
+			return _queue.Dequeue ();
+		}
+
+		/// <summary>
+		/// Pick first element from queue (this element will still be in queue).
+		/// </summary>
+		public TV Peek()
+		{
+			return _queue.Peek ();
+		}
+
+		/// <summary>
+		/// Returns number of elements within this queue.
+		/// </summary>
+		/// <value>The count of elements.</value>
+		public int Count => _queue.Count;
+	}
 
 	/// <summary>
 	/// Qriority queue.
 	/// </summary>
-	/// <test>
-	/// var pq = new Queue.PriorityQueue<int, int> ();
-	/// pq.Enqueue (1, 1);
-	/// Console.WriteLine (pq.Dequeue ()); // 1
-	/// Console.WriteLine();
-	///
-	/// pq.Enqueue (1, 1);
-	/// pq.Enqueue (2, 2);
-	/// Console.WriteLine (pq.Dequeue ()); // 2
-	/// Console.WriteLine (pq.Dequeue ()); // 1
-	/// Console.WriteLine();
-
-	/// pq.Enqueue (2, 2);
-	/// pq.Enqueue (1, 1);
-	/// Console.WriteLine (pq.Dequeue ()); // 2
-	/// pq.Enqueue (2, 2);
-	/// Console.WriteLine (pq.Dequeue ()); // 2
-	/// Console.WriteLine();
-	///
-	/// pq.Enqueue (2, 2);
-	/// pq.Enqueue (1, 1);
-	/// pq.Enqueue (2, 2);
-	/// pq.Enqueue (3, 3);
-	/// Console.WriteLine (pq.Dequeue ()); // 3
-	/// Console.WriteLine (pq.Dequeue ()); // 2
-	/// Console.WriteLine (pq.Dequeue ()); // 2
-	/// Console.WriteLine (pq.Dequeue ()); // 1
-	/// </test>
 	public class PriorityQueue<TK, TV> : IPriorityQueue<TK, TV> where TK : IComparable<TK>
 	{
 		/// <summary>
@@ -102,7 +123,7 @@ namespace Queue
 		{
 			return dequeue();
 		}
-		KeyValuePair<TK, TV> IQueue<KeyValuePair<TK, TV>>.Pick()
+		KeyValuePair<TK, TV> IQueue<KeyValuePair<TK, TV>>.Peek()
 		{
 			return _pq [1];
 		}
@@ -117,7 +138,7 @@ namespace Queue
 		{
 			return dequeue().Value;
 		}
-		public TV Pick()
+		public TV Peek()
 		{
 			return _pq [1].Value;
 		}

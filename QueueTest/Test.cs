@@ -33,6 +33,7 @@ namespace PriorityQueueTest
 			pq.Enqueue (1, 1);
 			pq.Enqueue (2, 2);
 			pq.Enqueue (3, 3);
+			Assert.AreEqual (pq.Peek (), 3);
 			Assert.AreEqual (pq.Dequeue (), 3); // 3
 			Assert.AreEqual (pq.Dequeue (), 2); // 2
 			Assert.AreEqual (pq.Dequeue (), 2); // 2
