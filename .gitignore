@@ -2,3 +2,4 @@
 */obj/*
 /.project
 *.userprefs
+/packages/**
