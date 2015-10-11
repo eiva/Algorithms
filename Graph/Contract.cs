@@ -51,4 +51,13 @@ namespace Graph
         /// <returns>Path.</returns>
         IEnumerable<KeyValuePair<TV, TE>> PathTo(TV v);
     }
+
+	/// <summary>
+	/// Allows to detect whether 2 vertices of a graph are connected.
+	/// </summary>
+	public interface IConnectedComponents<TV> where TV : IEquatable<TV>
+	{
+		bool IsConnected(TV v1, TV v2);
+		int Count { get; }
+	}
 }
