@@ -22,7 +22,7 @@ namespace Graph
 			where TV : IEquatable<TV>
 		{
 			private readonly int _count;
-			private readonly IDictionary<TV, int> _components;
+			private readonly IDictionary<TV, int> _components = new Dictionary<TV, int>();
 
 			public ConnectedComponentsImpl(IGraph<TV, TE> graph)
 			{
@@ -54,6 +54,11 @@ namespace Graph
 				var c1 = _components [v1];
 				var c2 = _components [v2];
 				return c1 == c2;
+			}
+
+			public int ComponentId(TV v)
+			{
+				return _components[v];
 			}
 
 			public int Count => _count;

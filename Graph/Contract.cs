@@ -16,7 +16,7 @@ namespace Graph
         /// <param name="v">First vertex.</param>
         /// <param name="t">Second vertex.</param>
         /// <param name="edge">Edge metadata.</param>
-        void AddEdge(TV v, TV t, TE edge);
+		void AddEdge(TV v, TV t, TE edge = default(TE));
 
         /// <summary>
         /// List of adjascent vertexes for given vertex.
@@ -28,7 +28,7 @@ namespace Graph
         /// <summary>
         /// List of vertexes.
         /// </summary>
-        IReadOnlyCollection<TV> Vertexes { get; }
+        IEnumerable<TV> Vertexes { get; }
     }
 
     /// <summary>
@@ -57,7 +57,25 @@ namespace Graph
 	/// </summary>
 	public interface IConnectedComponents<TV> where TV : IEquatable<TV>
 	{
+		/// <summary>
+		/// Checks that two vertexes are connected.
+		/// </summary>
+		/// <returns><c>true</c> if vertexes v1 and v2 are connected; otherwise, <c>false</c>.</returns>
+		/// <param name="v1">V1.</param>
+		/// <param name="v2">V2.</param>
 		bool IsConnected(TV v1, TV v2);
+
+		/// <summary>
+		/// Returns the id of component to which vertex is belong.
+		/// </summary>
+		/// <returns>The component id.</returns>
+		/// <param name="v">Vertex.</param>
+		int ComponentId(TV v);
+
+		/// <summary>
+		/// Returns the number of connected components.
+		/// </summary>
+		/// <value>The count.</value>
 		int Count { get; }
 	}
 }

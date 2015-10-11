@@ -28,9 +28,9 @@ namespace Graph
                 return _graph[v];
             }
 
-            public IReadOnlyCollection<TV> Vertexes
+			public IEnumerable<TV> Vertexes
 			{
-				get { return (IReadOnlyCollection<TV>)_graph.Keys; }
+				get { return _graph.Keys;}
 			}
         }
 
