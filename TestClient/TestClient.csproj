@@ -37,38 +37,4 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Graph\Graph.csproj">
-      <Project>{906B23A9-BD43-4530-83C6-5663528E99AB}</Project>
-      <Name>Graph</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Trae\Trae.csproj">
-      <Project>{D039DEDF-8172-4D22-80CE-8FC8B30ACF3C}</Project>
-      <Name>Trae</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tree\Tree.csproj">
-      <Project>{E1351B2A-7FAF-4887-8E08-C8868EC7F32C}</Project>
-      <Name>Tree</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</Project>
-      <Name>Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Permutation\Permutation.csproj">
-      <Project>{64100214-1431-424C-B8EA-3594F5C52835}</Project>
-      <Name>Permutation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UnionFind\UnionFind.csproj">
-      <Project>{A907035A-076F-4A72-A63A-B5E2E234C195}</Project>
-      <Name>UnionFind</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Text\Text.csproj">
-      <Project>{30044909-677F-45E0-B663-56DD3D052D3B}</Project>
-      <Name>Text</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Queue\Queue.csproj">
-      <Project>{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}</Project>
-      <Name>Queue</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{062498AF-905F-4BCB-98C3-20A9098775F5}</ProjectGuid>
+    <ProjectGuid>{5AD4458F-D71D-417B-B046-E9E0E9B831F3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>QueueTest</RootNamespace>
-    <AssemblyName>QueueTest</AssemblyName>
+    <RootNamespace>EIva.AlgorithmsTest</RootNamespace>
+    <AssemblyName>EIva.AlgorithmsTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,17 +33,12 @@
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Test.cs" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Queue\Queue.csproj">
-      <Project>{EDA68F62-DE96-4BF5-A1C3-768D8ED51B72}</Project>
-      <Name>Queue</Name>
-    </ProjectReference>
+    <Compile Include="ConnectedComponentTest.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
 </Project>

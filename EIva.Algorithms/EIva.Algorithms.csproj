@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{240A87DF-3A08-4EF9-8F55-4842849AC42B}</ProjectGuid>
+    <ProjectGuid>{15612214-EC0A-4790-8A8F-6C3F597EA892}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Utils</RootNamespace>
-    <AssemblyName>Utils</AssemblyName>
+    <RootNamespace>EIva.Algorithms</RootNamespace>
+    <AssemblyName>EIva.Algorithms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -18,7 +18,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -27,14 +26,30 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Graph\Contract.cs" />
+    <Compile Include="Graph\Graph.BFS.cs" />
+    <Compile Include="Graph\Graph.Bidirectional.cs" />
+    <Compile Include="Graph\Graph.DFS.cs" />
+    <Compile Include="ConnectedComponents\ConnectedComponents.cs" />
+    <Compile Include="Permutation.cs" />
+    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Distance.cs" />
+    <Compile Include="Trae\Contract.cs" />
+    <Compile Include="Tree\Tree.cs" />
+    <Compile Include="ConnectedComponents\UnionFind.cs" />
     <Compile Include="DictionaryHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Graph\" />
+    <Folder Include="ConnectedComponents\" />
+    <Folder Include="Trae\" />
+    <Folder Include="Tree\" />
+  </ItemGroup>
 </Project>
