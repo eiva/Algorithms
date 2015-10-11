@@ -3,17 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace UnionFind
+namespace EIva.Algorithms.ConnectedComponents
 {
-	/// <summary>
-	/// Connected components base interface.
-	/// </summary>
-	public interface IUnionFind
-	{
-		void Union(int i, int j);
-		bool IsConnected(int i, int j);
-		int Length { get; }
-	}
+
 
 	public class UF : IUnionFind
 	{

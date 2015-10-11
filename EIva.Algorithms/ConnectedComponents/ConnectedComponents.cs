@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Graph
+namespace EIva.Algorithms.ConnectedComponents
 {
-	public static partial class Graph
+	public static partial class C
 	{
 		public static IConnectedComponents<TV> ConnectedComponents<TV,TE>(this IGraph<TV, TE> graph)
 			where TV : IEquatable<TV>
