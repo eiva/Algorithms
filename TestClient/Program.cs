@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Utils;
+//using EIva.Algorithms.;
 using System.Linq;
 
 namespace TestClient
@@ -49,7 +49,6 @@ namespace TestClient
 			_map.Clear ();
 		}
 
-		IEnumerable
 	}
 	class MainClass
 	{

@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using EIva.Algorithms.ConnectedComponents;
 
 namespace GraphTest
 {
@@ -10,7 +11,7 @@ namespace GraphTest
 		public void TestEmpty()
 		{
 			var g = Graph.Graph.Bidirectional<int,int> ();
-			var cc = Graph.Graph.ConnectedComponents(g);
+			var cc = new ConnectedComponents<int, int>(g);
 			Assert.AreEqual (0, cc.Count);
 		}
 

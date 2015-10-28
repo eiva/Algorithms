@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -28,7 +28,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -38,19 +43,16 @@
     <Compile Include="Graph\Graph.DFS.cs" />
     <Compile Include="ConnectedComponents\ConnectedComponents.cs" />
     <Compile Include="Permutation.cs" />
-    <Compile Include="PriorityQueue.cs" />
-    <Compile Include="Distance.cs" />
+    <Compile Include="Queues\PriorityQueue.cs" />
+    <Compile Include="Text\Distance.cs" />
     <Compile Include="Trae\Contract.cs" />
     <Compile Include="Tree\Tree.cs" />
     <Compile Include="ConnectedComponents\UnionFind.cs" />
-    <Compile Include="DictionaryHelper.cs" />
+    <Compile Include="Utils\DictionaryHelper.cs" />
     <Compile Include="ConnectedComponents\Contract.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Graph\" />
-    <Folder Include="ConnectedComponents\" />
-    <Folder Include="Trae\" />
-    <Folder Include="Tree\" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

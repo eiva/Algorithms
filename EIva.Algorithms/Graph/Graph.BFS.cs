@@ -8,15 +8,17 @@ namespace Graph
     {
         #region BFS
 
-        public static IPath<TV, TE> BreadthFirstSearch<TV, TE>(this IGraph<TV, TE> graph, TV start) where TV : IEquatable<TV>
+        public static IPath<TV, TE> BreadthFirstSearch<TV, TE>(this IGraph<TV, TE> graph, TV start)
+            where TV : IEquatable<TV>
         {
             return new BreadthFirstPath<TV, TE>(graph, start);
         }
 
         private class BreadthFirstPath<TV, TE> : IPath<TV, TE> where TV : IEquatable<TV>
         {
-            private readonly TV _start;
             private readonly IDictionary<TV, KeyValuePair<TV, TE>> _edge = new Dictionary<TV, KeyValuePair<TV, TE>>();
+            private readonly TV _start;
+
             public BreadthFirstPath(IGraph<TV, TE> graph, TV start)
             {
                 _start = start;
@@ -37,6 +39,7 @@ namespace Graph
                     }
                 }
             }
+
             public bool HasPath(TV v)
             {
                 return _edge.ContainsKey(v);
@@ -59,6 +62,7 @@ namespace Graph
                 }
             }
         }
+
         #endregion
     }
 }

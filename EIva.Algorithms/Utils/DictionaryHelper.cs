@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Utils
+namespace EIva.Algorithms.Utils
 {
     /// <summary>
-    /// Some additional tools fro making routine operation with dictionaries a bit simpler.
+    ///     Some additional tools fro making routine operation with dictionaries a bit simpler.
     /// </summary>
     public static class DictionaryHelper
     {
         /// <summary>
-        /// Gets existing value or create new using new() from specified dictionary.
+        ///     Gets existing value or create new using new() from specified dictionary.
         /// </summary>
         /// <returns>The or create.</returns>
         /// <param name="dict">Dict.</param>
@@ -30,7 +30,7 @@ namespace Utils
         }
 
         /// <summary>
-        /// Gets existing value or create new using new() from specified dictionary.
+        ///     Gets existing value or create new using new() from specified dictionary.
         /// </summary>
         /// <returns>The or create.</returns>
         /// <param name="dict">Dict.</param>
@@ -51,4 +51,3 @@ namespace Utils
         }
     }
 }
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,5 +40,11 @@
   <ItemGroup>
     <Compile Include="ConnectedComponentTest.cs" />
     <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EIva.Algorithms\EIva.Algorithms.csproj">
+      <Project>{15612214-EC0A-4790-8A8F-6C3F597EA892}</Project>
+      <Name>EIva.Algorithms</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

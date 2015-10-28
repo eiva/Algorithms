@@ -7,14 +7,14 @@ namespace Graph
     public static partial class Graph
     {
         #region DFS
+
         public static IPath<TV, TE> DepthFirstSearch<TV, TE>(this IGraph<TV, TE> g, TV start) where TV : IEquatable<TV>
         {
             return new DepthFirstSearchPath<TV, TE>(g, start);
         }
 
         private class DepthFirstSearchPath<TV, TE> : IPath<TV, TE> where TV : IEquatable<TV>
-        { 
-
+        {
             private readonly IDictionary<TV, KeyValuePair<TV, TE>> _edgeTo = new Dictionary<TV, KeyValuePair<TV, TE>>();
 
             private readonly TV _start;
@@ -62,6 +62,7 @@ namespace Graph
                 }
             }
         }
+
         #endregion
     }
 }
